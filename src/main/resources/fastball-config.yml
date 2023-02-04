@@ -1,0 +1,137 @@
+theme: default
+customNpmDependencies:
+  antd: ^5.1.0
+  fastball-test-reference-component: 0.0.3
+menus:
+  Simple:
+    title: 基本组件
+    menus:
+      EmployeeForm:
+        title: 基础表单组件
+        component: dev.fastball.example.ui.simple.EmployeeForm
+#      EmployeeDescription:
+#        title: 基础详情组件
+#        component: dev.fastball.example.ui.simple.EmployeeDescription
+#        params:
+#          id: 20000001
+#          name: Mock 用户
+#          age: 33
+      EmployeeVariableDescription:
+        title: 有参详情组件
+        component: dev.fastball.example.ui.simple.EmployeeVariableDescription
+        params: 11000001
+      UserTable:
+        title: 基础表格组件
+        component: dev.fastball.example.ui.simple.EmployeeTable
+      UserWrapperTable:
+        title: 基础表格组件(入参包装, 可以接收排序分页等参数)
+        component: dev.fastball.example.ui.simple.EmployeeWrapperTable
+      OrgTreeTable:
+        title: 树形表格组件
+        component: dev.fastball.example.ui.simple.OrgTreeTable
+      EmployeeExpandedTable:
+        title: 可展开表格组件
+        component: dev.fastball.example.ui.simple.EmployeeExpandedTable
+      OrgTree:
+        title: 基础树组件
+        component: dev.fastball.example.ui.simple.OrgTree
+      OrgAsyncTree:
+        title: 异步加载树组件
+        component: dev.fastball.example.ui.simple.OrgAsyncTree
+      EmployeeWorkEvaluationTimeline:
+        title: 时间线组件
+        component: dev.fastball.example.ui.simple.EmployeeWorkEvaluationTimeline
+  Fields:
+    title: 字段展示
+    menus:
+      AllFieldForm:
+        title: 表单字段组件
+        component: dev.fastball.example.ui.fields.AllFieldForm
+      AllFieldDescription:
+        title: 详情字段组件
+        component: dev.fastball.example.ui.fields.AllFieldDescription
+      AllFieldTable:
+        title: 表格字段组件
+        component: dev.fastball.example.ui.fields.AllFieldTable
+  Classic:
+    title: 常见场景
+    menus:
+      CrudTable:
+        title: 经典 CRUD 表格
+        component: dev.fastball.example.ui.classic.CrudTable
+      TreeChartLayout:
+        title: 树和图表联动
+        component: dev.fastball.example.ui.classic.TreeChartLayout
+      EnableSwitchTable:
+        title: 表格动态按钮(启禁用)
+        component: dev.fastball.example.ui.classic.EnableSwitchTable
+      EmployeeWorkEvaluationNestedForm:
+        title: 嵌套表单
+        component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationNestedForm
+      EmployeeWorkEvaluationFormList:
+        title: 嵌套表单列表
+        component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationFormList
+      EmployeeWorkEvaluationListDescription:
+        title: 嵌套表单列表详情展示
+        component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationListDescription
+        params: 11000007
+  Charts:
+    title: 图表组件
+    menus:
+      BasicLineChart:
+        title: 基础折线图
+        component: dev.fastball.example.ui.chart.BasicLineChart
+      MultipleLineChart:
+        title: 多折线图
+        component: dev.fastball.example.ui.chart.MultipleLineChart
+      BasicColumnChart:
+        title: 基础柱状图
+        component: dev.fastball.example.ui.chart.BasicColumnChart
+      MultipleColumnChart:
+        title: 堆叠柱状图
+        component: dev.fastball.example.ui.chart.MultipleColumnChart
+      BasicBarChart:
+        title: 基础条形图
+        component: dev.fastball.example.ui.chart.BasicBarChart
+      MultipleBarChart:
+        title: 堆叠条形图
+        component: dev.fastball.example.ui.chart.MultipleBarChart
+      BasicAreaChart:
+        title: 基础面积图
+        component: dev.fastball.example.ui.chart.BasicAreaChart
+      MultipleAreaChart:
+        title: 堆积面积图
+        component: dev.fastball.example.ui.chart.MultipleAreaChart
+  Layout:
+    title: 布局组件
+    menus:
+      ComposeLayout:
+        title: 上下布局
+        component: dev.fastball.example.ui.layout.EmployeeTopAndBottomLayout
+      UserLTBTreeLayout:
+        title: 左右布局
+        component: dev.fastball.example.ui.layout.EmployeeLeftAndRightLayout
+      UserLRTreeLayout:
+        title: 左上下布局
+        component: dev.fastball.example.ui.layout.OrgEmployeeLeftAndTopBottomLayout
+      UserLRLayout:
+        title: 组合布局
+        component: dev.fastball.example.ui.layout.ComposeLayout
+      SimpleGridLayout:
+        title: 网格布局
+        component: dev.fastball.example.ui.layout.SimpleGridLayout
+      DraggableSimpleGridLayout:
+        title: 可拖拽可调整网格布局
+        component: dev.fastball.example.ui.layout.DraggableSimpleGridLayout
+  Reference:
+    title: 引用 Npm 组件
+    menus:
+      NpmComponentEmployeeTable:
+        title: 引用外部 NPM 组件
+        component: dev.fastball.example.ui.reference.NpmComponentEmployeeTable
+      QRCodeEmployeeTable:
+        title: 引用 AntD 的二维码
+        component: dev.fastball.example.ui.reference.QRCodeEmployeeTable
+      PopupQRCodeEmployeeTable:
+        title: 引用 AntD 的二维码(Hover Popup)
+        component: dev.fastball.example.ui.reference.PopupQRCodeEmployeeTable
