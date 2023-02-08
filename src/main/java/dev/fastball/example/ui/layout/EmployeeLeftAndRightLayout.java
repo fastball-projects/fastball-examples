@@ -1,7 +1,6 @@
 package dev.fastball.example.ui.layout;
 
 import dev.fastball.core.annotation.UIComponent;
-import dev.fastball.example.ui.simple.EmployeeDescription;
 import dev.fastball.example.ui.related.OrgEmployeeTable;
 import dev.fastball.example.ui.simple.OrgTree;
 import dev.fastball.ui.components.layout.LayoutComponent;

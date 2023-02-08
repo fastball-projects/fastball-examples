@@ -4,7 +4,7 @@ import dev.fastball.core.annotation.UIComponent;
 import dev.fastball.example.common.model.Employee;
 import dev.fastball.example.common.model.WorkEvaluation;
 import dev.fastball.example.common.repo.WorkEvaluationRepository;
-import dev.fastball.ui.components.timeline.Timeline;
+import dev.fastball.ui.components.timeline.VariableTimeline;
 import dev.fastball.ui.components.timeline.config.TimelineConfig;
 import lombok.RequiredArgsConstructor;
 
@@ -17,11 +17,11 @@ import java.util.Collection;
 @UIComponent
 @TimelineConfig(
         keyField = "id",
-        titleField = "workContent",
-        timeField = "startedAt"
+        leftField = "startedAt",
+        rightField = "workContent"
 )
 @RequiredArgsConstructor
-public class EmployeeWorkEvaluationTimeline implements Timeline<WorkEvaluation, Employee> {
+public class EmployeeWorkEvaluationTimeline implements VariableTimeline<WorkEvaluation, Employee> {
 
     private final WorkEvaluationRepository repo;
 

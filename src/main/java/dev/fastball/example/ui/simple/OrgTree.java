@@ -1,10 +1,9 @@
 package dev.fastball.example.ui.simple;
 
 import dev.fastball.core.annotation.*;
-import dev.fastball.example.common.model.Employee;
+import dev.fastball.core.component.DataResult;
 import dev.fastball.example.common.model.Org;
 import dev.fastball.example.common.repo.OrgRepository;
-import dev.fastball.core.component.DataResult;
 import dev.fastball.ui.components.tree.Tree;
 import dev.fastball.ui.components.tree.config.TreeConfig;
 import lombok.RequiredArgsConstructor;

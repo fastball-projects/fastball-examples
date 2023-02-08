@@ -4,7 +4,6 @@ import dev.fastball.core.annotation.Field;
 import dev.fastball.core.annotation.Lookup;
 import dev.fastball.core.info.basic.DisplayType;
 import dev.fastball.core.info.basic.ValueType;
-import dev.fastball.example.common.dict.WorkEvaluationLevel;
 import dev.fastball.example.ui.action.EmployeeLookupAction;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -4,7 +4,10 @@ import dev.fastball.example.common.model.GoodsType;
 import dev.fastball.example.common.model.SalesStatistics;
 import org.springframework.stereotype.Component;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 /**

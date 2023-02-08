@@ -5,8 +5,7 @@ import dev.fastball.example.common.model.GoodsType;
 import dev.fastball.example.common.model.SalesStatistics;
 import dev.fastball.example.common.repo.SalesStatisticsRepo;
 import dev.fastball.ui.components.chart.Chart;
-import dev.fastball.ui.components.chart.config.ChartConfig;
-import dev.fastball.ui.components.chart.config.ChartType;
+import dev.fastball.ui.components.chart.config.ColumnChartConfig;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Collection;
@@ -17,8 +16,7 @@ import java.util.Collection;
  */
 @UIComponent
 @RequiredArgsConstructor
-@ChartConfig(
-        type = ChartType.Column,
+@ColumnChartConfig(
         xField = "year",
         yField = "salesVolume"
 )

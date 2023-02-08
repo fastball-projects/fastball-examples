@@ -1,21 +1,18 @@
 package dev.fastball.example.ui.classic;
 
 import dev.fastball.core.annotation.Field;
-import dev.fastball.core.annotation.RecordAction;
 import dev.fastball.core.annotation.UIComponent;
 import dev.fastball.example.common.model.Employee;
 import dev.fastball.example.common.model.WorkEvaluation;
 import dev.fastball.example.common.repo.EmployeeRepository;
 import dev.fastball.example.common.repo.WorkEvaluationRepository;
 import dev.fastball.ui.components.description.VariableDescription;
-import dev.fastball.ui.components.form.Form;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 
 import java.util.Collection;
-import java.util.List;
 
 
 /**

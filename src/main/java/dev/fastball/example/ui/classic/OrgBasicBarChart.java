@@ -6,8 +6,7 @@ import dev.fastball.example.common.model.Org;
 import dev.fastball.example.common.model.SalesStatistics;
 import dev.fastball.example.common.repo.SalesStatisticsRepo;
 import dev.fastball.ui.components.chart.VariableChart;
-import dev.fastball.ui.components.chart.config.ChartConfig;
-import dev.fastball.ui.components.chart.config.ChartType;
+import dev.fastball.ui.components.chart.config.BarChartConfig;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Collection;
@@ -18,8 +17,7 @@ import java.util.Collection;
  */
 @UIComponent
 @RequiredArgsConstructor
-@ChartConfig(
-        type = ChartType.Bar,
+@BarChartConfig(
         xField = "salesVolume",
         yField = "year"
 )

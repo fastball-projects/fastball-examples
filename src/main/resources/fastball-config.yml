@@ -3,6 +3,28 @@ customNpmDependencies:
   antd: ^5.1.0
   fastball-test-reference-component: 0.0.3
 menus:
+  Classic:
+    title: 常见场景
+    menus:
+      CrudTable:
+        title: 经典 CRUD 表格
+        component: dev.fastball.example.ui.classic.CrudTable
+      TreeChartLayout:
+        title: 树和图表联动
+        component: dev.fastball.example.ui.classic.TreeChartLayout
+      EnableSwitchTable:
+        title: 表格动态按钮(启禁用)
+        component: dev.fastball.example.ui.classic.EnableSwitchTable
+      EmployeeWorkEvaluationNestedForm:
+        title: 嵌套表单
+        component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationNestedForm
+      EmployeeWorkEvaluationFormList:
+        title: 嵌套表单列表
+        component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationFormList
+      EmployeeWorkEvaluationListDescription:
+        title: 嵌套表单列表详情展示
+        component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationListDescription
+        params: 11000007
   Simple:
     title: 基本组件
     menus:
@@ -19,7 +41,7 @@ menus:
       EmployeeVariableDescription:
         title: 有参详情组件
         component: dev.fastball.example.ui.simple.EmployeeVariableDescription
-        params: 11000001
+        params: 11000007
       UserTable:
         title: 基础表格组件
         component: dev.fastball.example.ui.simple.EmployeeTable
@@ -53,28 +75,6 @@ menus:
       AllFieldTable:
         title: 表格字段组件
         component: dev.fastball.example.ui.fields.AllFieldTable
-  Classic:
-    title: 常见场景
-    menus:
-      CrudTable:
-        title: 经典 CRUD 表格
-        component: dev.fastball.example.ui.classic.CrudTable
-      TreeChartLayout:
-        title: 树和图表联动
-        component: dev.fastball.example.ui.classic.TreeChartLayout
-      EnableSwitchTable:
-        title: 表格动态按钮(启禁用)
-        component: dev.fastball.example.ui.classic.EnableSwitchTable
-      EmployeeWorkEvaluationNestedForm:
-        title: 嵌套表单
-        component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationNestedForm
-      EmployeeWorkEvaluationFormList:
-        title: 嵌套表单列表
-        component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationFormList
-      EmployeeWorkEvaluationListDescription:
-        title: 嵌套表单列表详情展示
-        component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationListDescription
-        params: 11000007
   Charts:
     title: 图表组件
     menus:

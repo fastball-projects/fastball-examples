@@ -1,11 +1,11 @@
 package dev.fastball.example.ui.related;
 
 import dev.fastball.core.annotation.UIComponent;
+import dev.fastball.core.component.DataResult;
 import dev.fastball.example.common.model.Employee;
 import dev.fastball.example.common.model.Org;
 import dev.fastball.example.common.model.UserQuerier;
 import dev.fastball.example.common.repo.EmployeeRepository;
-import dev.fastball.core.component.DataResult;
 import dev.fastball.ui.components.table.VariableSearchTable;
 import lombok.RequiredArgsConstructor;
 
