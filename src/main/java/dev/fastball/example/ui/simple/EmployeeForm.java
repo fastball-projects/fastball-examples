@@ -19,7 +19,7 @@ public class EmployeeForm implements Form<Employee> {
 
     private final EmployeeRepository employeeRepository;
 
-    @RecordAction(name = "提交")
+    @RecordAction(name = "提交", confirmMessage = "确认提交吗?")
     public void submit(Employee employee) {
         employeeRepository.save(employee);
     }

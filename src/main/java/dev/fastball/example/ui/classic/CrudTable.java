@@ -38,7 +38,7 @@ public class CrudTable implements SearchTable<Employee, UserQuerier> {
         return DataResult.build(data);
     }
 
-    @RecordAction(name = "删除", recordActionFilter = StaticEmployeeFilter.class)
+    @RecordAction(name = "删除", recordActionFilter = StaticEmployeeFilter.class, confirmMessage = "确认删除吗?")
     public void deleteEmployee(Employee employee) {
         employeeRepo.delete(employee);
     }
