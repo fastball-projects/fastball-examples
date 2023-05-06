@@ -8,6 +8,7 @@ import dev.fastball.example.common.model.Employee;
 import dev.fastball.example.common.model.UserQuerier;
 import dev.fastball.example.common.repo.EmployeeRepository;
 import dev.fastball.ui.components.table.SearchTable;
+import dev.fastball.ui.components.table.param.TableSearchParam;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Collection;
@@ -23,7 +24,7 @@ public class EnableSwitchTable implements SearchTable<Employee, UserQuerier> {
     private final EmployeeRepository employeeRepo;
 
     @Override
-    public DataResult<Employee> loadData(UserQuerier querier) {
+    public DataResult<Employee> loadData(TableSearchParam<UserQuerier> querier) {
         Collection<Employee> data = employeeRepo.findByQuerier(querier);
         return DataResult.build(data);
     }

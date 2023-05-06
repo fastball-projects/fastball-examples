@@ -54,6 +54,6 @@ public class Employee extends BasicModel {
 
     @Field(title = "所属组织", tips = "员工所属的组织机构, 用来演示动态数据选择")
     @Lookup(value = OrgLookupAction.class, labelField = "name", valueField = "id")
-    @Popup(value = @RefComponent(EmployeeDescription.class), width = 720, popupType = PopupType.Drawer, placementType = PlacementType.Left)
+    @Popup(value = @RefComponent(EmployeeDescription.class), width = "100%", popupType = PopupType.Drawer, placementType = PlacementType.Left)
     private Integer orgId;
 }

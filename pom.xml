@@ -13,13 +13,23 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <fastball.version>0.2.0</fastball.version>
-        <fastball-ui.version>0.2.0</fastball-ui.version>
+        <fastball.version>0.3.1-SNAPSHOT</fastball.version>
+        <fastball-ui.version>0.3.1-SNAPSHOT</fastball-ui.version>
         <spring-boot.version>2.7.7</spring-boot.version>
         <h2.version>2.1.214</h2.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.32</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>dev.fastball</groupId>-->
+<!--            <artifactId>fastball-portal-jpa</artifactId>-->
+<!--            <version>${fastball.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>dev.fastball</groupId>
             <artifactId>fastball-ui-api</artifactId>

@@ -2,9 +2,9 @@ package dev.fastball.example.ui.classic;
 
 import dev.fastball.core.annotation.*;
 import dev.fastball.core.component.DataResult;
+import dev.fastball.core.component.DownloadFile;
 import dev.fastball.core.component.RecordActionFilter;
 import dev.fastball.core.info.basic.PopupType;
-import dev.fastball.core.info.basic.ViewActionType;
 import dev.fastball.example.common.model.Employee;
 import dev.fastball.example.common.model.UserQuerier;
 import dev.fastball.example.common.repo.EmployeeRepository;
@@ -12,7 +12,14 @@ import dev.fastball.example.ui.simple.EmployeeForm;
 import dev.fastball.ui.components.table.SearchTable;
 import dev.fastball.ui.components.table.param.TableSearchParam;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.io.IOUtils;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -22,13 +29,7 @@ import java.util.Objects;
  */
 @UIComponent
 @RequiredArgsConstructor
-@ViewActions(
-        actions = {
-                @ViewAction(key = "new", name = "新增员工", popup = @Popup(value = @RefComponent(EmployeeForm.class), popupType = PopupType.Modal))
-        },
-        recordActions = @ViewAction(key = "edit", name = "编辑", popup = @Popup(value = @RefComponent(EmployeeForm.class)))
-)
-public class CrudTable implements SearchTable<Employee, UserQuerier> {
+public class UploadDownloadTable implements SearchTable<Employee, UserQuerier> {
 
     private final EmployeeRepository employeeRepo;
 
@@ -38,15 +39,16 @@ public class CrudTable implements SearchTable<Employee, UserQuerier> {
         return DataResult.build(data);
     }
 
-    @RecordAction(name = "删除", recordActionFilter = StaticEmployeeFilter.class)
-    public void deleteEmployee(Employee employee) {
-        employeeRepo.delete(employee);
+    @Action(key = "upload", name = "上传")
+    public void upload(MultipartFile multipartFile) throws IOException {
+        System.out.println(multipartFile.getContentType());
+        IOUtils.copy(multipartFile.getInputStream(), System.out);
     }
 
-    public static class StaticEmployeeFilter implements RecordActionFilter<Employee> {
-        @Override
-        public boolean filter(Employee employee) {
-            return !Objects.equals(employee.getId(), 11000007);
-        }
+    @Action(key = "download", name = "下载")
+    public DownloadFile download(TableSearchParam<UserQuerier> querier) throws IOException {
+        System.out.println(querier);
+        return DownloadFile.builder().fileName("test.txt").inputStream(new ByteArrayInputStream("测试文件".getBytes(StandardCharsets.UTF_8))).contentType("text/plain").build();
     }
+
 }

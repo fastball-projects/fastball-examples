@@ -4,6 +4,7 @@ import dev.fastball.core.annotation.Field;
 import dev.fastball.core.annotation.Lookup;
 import dev.fastball.core.annotation.TreeLookup;
 import dev.fastball.core.component.Range;
+import dev.fastball.core.field.Address;
 import dev.fastball.core.info.basic.ValueType;
 import dev.fastball.example.common.dict.OrgType;
 import dev.fastball.example.ui.action.EmployeeLookupAction;
@@ -36,6 +37,12 @@ public class AllFormFieldModel {
     @Field(title = "多行文本", type = ValueType.TEXTAREA)
     private String textarea;
 
+    @Field(title = "多行文本", type = ValueType.IMAGE)
+    private String image;
+
+    @Field(title = "多行文本", type = ValueType.AVATAR)
+    private String avatar;
+
     @Field(title = "数字")
     private Integer number;
 
@@ -51,7 +58,7 @@ public class AllFormFieldModel {
     @Field(title = "日期时间", type = ValueType.DATE_TIME)
     private Date dateTime;
 
-    @Field(title = "日期时间区间", type = ValueType.DATE_TIME)
+    @Field(title = "日期时间区间", type = ValueType.DATE_TIME_RANGE)
     private Range<Date> dateTimeRange;
 
     @Field(title = "周选择器", type = ValueType.DATE_WEEK)
@@ -105,4 +112,7 @@ public class AllFormFieldModel {
     @Field(title = "树状多选(后台获取数据)")
     @TreeLookup(value = OrgTreeLookupAction.class, labelField = "name", valueField = "id", childrenField = "subOrg")
     private List<Integer> multipleTreeLookupSelect;
+
+    @Field(title = "地址组件", type = ValueType.ADDRESS)
+    private Address address;
 }

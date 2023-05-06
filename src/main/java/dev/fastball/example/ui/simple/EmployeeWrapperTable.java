@@ -19,7 +19,7 @@ import java.util.Collection;
 @UIComponent
 @RequiredArgsConstructor
 @TableConfig(keywordSearch = true)
-public class EmployeeWrapperTable implements SearchTable<Employee, TableSearchParam<UserQuerier>> {
+public class EmployeeWrapperTable implements SearchTable<Employee, UserQuerier> {
 
     private final EmployeeRepository employeeRepo;
 

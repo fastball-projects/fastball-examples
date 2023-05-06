@@ -9,6 +9,9 @@ menus:
       CrudTable:
         title: 经典 CRUD 表格
         component: dev.fastball.example.ui.classic.CrudTable
+      UploadDownloadTable:
+        title: 上传下载表格
+        component: dev.fastball.example.ui.classic.UploadDownloadTable
       TreeChartLayout:
         title: 树和图表联动
         component: dev.fastball.example.ui.classic.TreeChartLayout

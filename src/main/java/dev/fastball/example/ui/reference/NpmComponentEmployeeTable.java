@@ -10,6 +10,7 @@ import dev.fastball.example.common.model.UserQuerier;
 import dev.fastball.example.common.repo.EmployeeRepository;
 import dev.fastball.ui.components.table.SearchTable;
 import dev.fastball.ui.components.table.config.CopyableColumn;
+import dev.fastball.ui.components.table.param.TableSearchParam;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
@@ -31,8 +32,8 @@ public class NpmComponentEmployeeTable implements SearchTable<NpmComponentEmploy
     private final EmployeeRepository employeeRepo;
 
     @Override
-    public DataResult<NpmComponentEmployee> loadData(UserQuerier querier) {
-        Collection<NpmComponentEmployee> data = employeeRepo.findByQuerier(querier).stream().map(employee -> {
+    public DataResult<NpmComponentEmployee> loadData(TableSearchParam<UserQuerier> querier) {
+        Collection<NpmComponentEmployee> data = employeeRepo.findByQuerier(querier.getSearch()).stream().map(employee -> {
             NpmComponentEmployee qrCodeEmployee = new NpmComponentEmployee();
             BeanUtils.copyProperties(employee, qrCodeEmployee);
             return qrCodeEmployee;

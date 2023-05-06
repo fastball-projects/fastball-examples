@@ -7,6 +7,7 @@ import dev.fastball.example.common.model.Org;
 import dev.fastball.example.common.model.UserQuerier;
 import dev.fastball.example.common.repo.EmployeeRepository;
 import dev.fastball.ui.components.table.VariableSearchTable;
+import dev.fastball.ui.components.table.param.TableSearchParam;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Collection;
@@ -22,8 +23,8 @@ public class OrgEmployeeTable implements VariableSearchTable<Employee, UserQueri
     private final EmployeeRepository employeeRepo;
 
     @Override
-    public DataResult<Employee> loadData(UserQuerier querier, Org org) {
-        Collection<Employee> data = employeeRepo.findByQuerierAndOrgId(querier, org != null ? org.getId() : null);
+    public DataResult<Employee> loadData(TableSearchParam<UserQuerier> querier, Org org) {
+        Collection<Employee> data = employeeRepo.findByQuerierAndOrgId(querier.getSearch(), org != null ? org.getId() : null);
         return DataResult.build(data);
     }
 }

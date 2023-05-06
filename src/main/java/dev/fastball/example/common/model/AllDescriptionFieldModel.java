@@ -28,21 +28,21 @@ public class AllDescriptionFieldModel extends AllFormFieldModel {
 
     @Field(title = "气泡展示(悬停)")
     @Lookup(value = EmployeeLookupAction.class, labelField = "name", valueField = "id")
-    @Popup(value = @RefComponent(value = EmployeeVariableDescription.class, currentFieldInput = true), width = 720, popupType = PopupType.Popover, triggerType = PopupTriggerType.Hover)
+    @Popup(value = @RefComponent(value = EmployeeVariableDescription.class, currentFieldInput = true), popupType = PopupType.Popover, triggerType = PopupTriggerType.Hover)
     private Integer hoverPopup;
 
     @Field(title = "模态窗展示(右键点击)")
     @Lookup(value = EmployeeLookupAction.class, labelField = "name", valueField = "id")
-    @Popup(value = @RefComponent(value = EmployeeVariableDescription.class, currentFieldInput = true), width = 720, popupType = PopupType.Modal, triggerType = PopupTriggerType.ContextMenu)
+    @Popup(value = @RefComponent(value = EmployeeVariableDescription.class, currentFieldInput = true), popupType = PopupType.Modal, triggerType = PopupTriggerType.ContextMenu)
     private Integer contextMenuPopup;
 
     @Field(title = "左侧抽屉展示(左键点击)")
     @Lookup(value = EmployeeLookupAction.class, labelField = "name", valueField = "id")
-    @Popup(value = @RefComponent(value = EmployeeVariableDescription.class, currentFieldInput = true), width = 720, popupType = PopupType.Drawer, placementType = PlacementType.Left)
+    @Popup(value = @RefComponent(value = EmployeeVariableDescription.class, currentFieldInput = true), popupType = PopupType.Drawer, placementType = PlacementType.Left)
     private Integer leftDrawerPopup;
 
     @Field(title = "抽屉展示(左键点击)")
     @Lookup(value = EmployeeLookupAction.class, labelField = "name", valueField = "id")
-    @Popup(value = @RefComponent(value = EmployeeVariableDescription.class, currentFieldInput = true), width = 720, popupType = PopupType.Drawer)
+    @Popup(value = @RefComponent(value = EmployeeVariableDescription.class, currentFieldInput = true), popupType = PopupType.Drawer)
     private Integer clickPopup;
 }
