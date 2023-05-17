@@ -2,6 +2,7 @@ package dev.fastball.example.common.model;
 
 import dev.fastball.core.annotation.Field;
 import dev.fastball.core.component.DataRecord;
+import dev.fastball.core.component.DefaultDataRecord;
 import dev.fastball.core.info.basic.DisplayType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +21,7 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class BasicModel extends DataRecord {
+public class BasicModel extends DefaultDataRecord {
     @Field(title = "唯一标识", display = DisplayType.Hidden)
     protected Integer id;
 
