@@ -1,6 +1,6 @@
 package dev.fastball.example.common.repo;
 
-import dev.fastball.core.component.Range;
+import dev.fastball.core.field.Range;
 import dev.fastball.example.common.dict.OrgType;
 import dev.fastball.example.common.model.AllDescriptionFieldModel;
 

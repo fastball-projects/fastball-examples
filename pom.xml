@@ -6,34 +6,47 @@
 
     <groupId>dev.fastball.example</groupId>
     <artifactId>fastball-example</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.6.2</version>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <fastball.version>0.3.1-SNAPSHOT</fastball.version>
-        <fastball-ui.version>0.3.1-SNAPSHOT</fastball-ui.version>
-        <spring-boot.version>2.7.7</spring-boot.version>
+        <fastball.version>0.6.2</fastball.version>
+        <fastball-ui.version>0.6.2</fastball-ui.version>
+        <fastball-portal.version>0.6.2</fastball-portal.version>
+        <spring-boot.version>3.3.1</spring-boot.version>
         <h2.version>2.1.214</h2.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>bitbean-fastball-mvn</id>
+            <name>mvn</name>
+            <url>https://bitbean-maven.pkg.coding.net/repository/fastball/mvn/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>bitbean-fastball-mvn</id>
+            <name>mvn</name>
+            <url>https://bitbean-maven.pkg.coding.net/repository/fastball/mvn/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <dependencies>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.32</version>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>dev.fastball</groupId>-->
-<!--            <artifactId>fastball-portal-jpa</artifactId>-->
-<!--            <version>${fastball.version}</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>dev.fastball</groupId>
             <artifactId>fastball-ui-api</artifactId>
             <version>${fastball-ui.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.fastball</groupId>
+            <artifactId>fastball-ui-compiler</artifactId>
+            <version>${fastball-ui.version}</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>dev.fastball</groupId>
@@ -48,23 +61,18 @@
         </dependency>
         <dependency>
             <groupId>dev.fastball</groupId>
-            <artifactId>fastball-ui-compiler</artifactId>
-            <version>${fastball-ui.version}</version>
-            <optional>true</optional>
+            <artifactId>fastball-portal-jpa</artifactId>
+            <version>${fastball-portal.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <compilerArgs>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>dev.fastball</groupId>
                 <artifactId>fastball-maven-plugin</artifactId>
@@ -80,7 +88,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.7.7</version>
+                <version>3.3.1</version>
                 <configuration>
                     <attach>false</attach>
                     <mainClass>dev.fastball.example.Application</mainClass>

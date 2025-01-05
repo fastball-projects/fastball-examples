@@ -1,10 +1,20 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test
-    username: root
-    password: password
-  jpa:
-    show-sql: true
-    hibernate.ddl-auto: create
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    url: jdbc:h2:mem:test
+fastball:
+  security:
+    admin:
+      init-admin: true
+    jwt:
+      expiration: 1296000
+      refreshTime: 86400
+    anonymousPath:
+      - /api/dashboard/**
+      - /api/login/weixin
+      - /api/login/weixin/bind
+  storage:
+    minio:
+      endpoint: http://localhost:9000
+      accessKey: gw9sZSNNb2QW4DOO
+      secretKey: XuxcmUlHZiCocL9sAAOEgGLsSUhl0vx0
+      defaultBucket: flag

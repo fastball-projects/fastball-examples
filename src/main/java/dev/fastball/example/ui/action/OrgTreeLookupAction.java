@@ -1,6 +1,7 @@
 package dev.fastball.example.ui.action;
 
 import dev.fastball.core.annotation.UIComponent;
+import dev.fastball.core.component.LookupActionParam;
 import dev.fastball.core.component.TreeLookupAction;
 import dev.fastball.example.common.model.Org;
 import dev.fastball.example.common.repo.OrgRepository;
@@ -19,7 +20,7 @@ public class OrgTreeLookupAction implements TreeLookupAction<Org, Object> {
     private final OrgRepository orgRepository;
 
     @Override
-    public Collection<Org> loadLookupItems(Object param) {
+    public Collection<Org> loadLookupItems(LookupActionParam<Object> param) {
         return orgRepository.findRootAndLoadSubOrg();
     }
 }

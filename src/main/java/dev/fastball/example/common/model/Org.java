@@ -4,7 +4,7 @@ import dev.fastball.core.annotation.Field;
 import dev.fastball.core.annotation.Lookup;
 import dev.fastball.core.annotation.Model;
 import dev.fastball.core.annotation.TreeLookup;
-import dev.fastball.core.info.basic.DisplayType;
+import dev.fastball.meta.basic.DisplayType;
 import dev.fastball.example.common.dict.OrgType;
 import dev.fastball.example.ui.action.OrgLookupAction;
 import dev.fastball.example.ui.action.OrgTreeLookupAction;

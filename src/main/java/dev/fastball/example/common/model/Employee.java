@@ -1,11 +1,11 @@
 package dev.fastball.example.common.model;
 
 import dev.fastball.core.annotation.*;
-import dev.fastball.core.info.basic.PlacementType;
-import dev.fastball.core.info.basic.PopupType;
 import dev.fastball.example.common.dict.EmployeeType;
 import dev.fastball.example.ui.action.OrgLookupAction;
 import dev.fastball.example.ui.simple.EmployeeDescription;
+import dev.fastball.meta.basic.PlacementType;
+import dev.fastball.meta.basic.PopupType;
 import dev.fastball.ui.components.table.config.CopyableColumn;
 import dev.fastball.ui.components.table.config.SortableColumn;
 import lombok.AllArgsConstructor;

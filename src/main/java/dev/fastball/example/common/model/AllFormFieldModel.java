@@ -3,9 +3,9 @@ package dev.fastball.example.common.model;
 import dev.fastball.core.annotation.Field;
 import dev.fastball.core.annotation.Lookup;
 import dev.fastball.core.annotation.TreeLookup;
-import dev.fastball.core.component.Range;
+import dev.fastball.core.field.Range;
 import dev.fastball.core.field.Address;
-import dev.fastball.core.info.basic.ValueType;
+import dev.fastball.meta.basic.ValueType;
 import dev.fastball.example.common.dict.OrgType;
 import dev.fastball.example.ui.action.EmployeeLookupAction;
 import dev.fastball.example.ui.action.OrgTreeLookupAction;
@@ -37,10 +37,10 @@ public class AllFormFieldModel {
     @Field(title = "多行文本", type = ValueType.TEXTAREA)
     private String textarea;
 
-    @Field(title = "多行文本", type = ValueType.IMAGE)
+    @Field(title = "附件", type = ValueType.ATTACHMENT)
     private String image;
 
-    @Field(title = "多行文本", type = ValueType.AVATAR)
+    @Field(title = "头像", type = ValueType.AVATAR)
     private String avatar;
 
     @Field(title = "数字")

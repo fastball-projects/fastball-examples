@@ -2,6 +2,7 @@ package dev.fastball.example.ui.action;
 
 import dev.fastball.core.annotation.UIComponent;
 import dev.fastball.core.component.LookupAction;
+import dev.fastball.core.component.LookupActionParam;
 import dev.fastball.example.common.model.Org;
 import dev.fastball.example.common.repo.OrgRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +20,7 @@ public class OrgLookupAction implements LookupAction<Org, Object> {
     private final OrgRepository orgRepository;
 
     @Override
-    public Collection<Org> loadLookupItems(Object o) {
+    public Collection<Org> loadLookupItems(LookupActionParam<Object> param) {
         return orgRepository.findAll();
     }
 }

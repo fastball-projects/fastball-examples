@@ -3,10 +3,12 @@ package dev.fastball.example.ui.classic;
 import dev.fastball.core.annotation.Field;
 import dev.fastball.core.annotation.UIComponent;
 import dev.fastball.example.common.model.Employee;
+import dev.fastball.example.common.model.IdModel;
 import dev.fastball.example.common.model.WorkEvaluation;
 import dev.fastball.example.common.repo.EmployeeRepository;
 import dev.fastball.example.common.repo.WorkEvaluationRepository;
-import dev.fastball.ui.components.description.VariableDescription;
+import dev.fastball.ui.components.form.VariableForm;
+import dev.fastball.ui.components.form.config.FormConfig;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
@@ -20,14 +22,15 @@ import java.util.Collection;
  * @since 2023/1/28
  */
 @UIComponent
+@FormConfig(readonly = true)
 @RequiredArgsConstructor
-public class EmployeeWorkEvaluationListDescription implements VariableDescription<EmployeeWorkEvaluationListDescription.WorkEvaluationEmployee, Integer> {
+public class EmployeeWorkEvaluationListDescription implements VariableForm<EmployeeWorkEvaluationListDescription.WorkEvaluationEmployee, IdModel> {
     private final EmployeeRepository employeeRepo;
     private final WorkEvaluationRepository workEvaluationRepository;
 
     @Override
-    public WorkEvaluationEmployee loadData(Integer id) {
-        Employee employee = employeeRepo.findById(id);
+    public WorkEvaluationEmployee loadData(IdModel param) {
+        Employee employee = employeeRepo.findById(param.getId());
         WorkEvaluationEmployee workEvaluationEmployee = new WorkEvaluationEmployee();
         BeanUtils.copyProperties(employee, workEvaluationEmployee);
         workEvaluationEmployee.setFirstWorkEvaluation(workEvaluationRepository.findAll());

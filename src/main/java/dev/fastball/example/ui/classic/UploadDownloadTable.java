@@ -4,7 +4,7 @@ import dev.fastball.core.annotation.*;
 import dev.fastball.core.component.DataResult;
 import dev.fastball.core.component.DownloadFile;
 import dev.fastball.core.component.RecordActionFilter;
-import dev.fastball.core.info.basic.PopupType;
+import dev.fastball.meta.basic.PopupType;
 import dev.fastball.example.common.model.Employee;
 import dev.fastball.example.common.model.UserQuerier;
 import dev.fastball.example.common.repo.EmployeeRepository;

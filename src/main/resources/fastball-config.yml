@@ -1,6 +1,10 @@
 theme: default
+logo: /logo.jpg
+title: Fastball 演示工程
+description: Fastball 演示工程, 展示了基础组件的使用
+copyright: © Copyright 2024 范数科技 版权所有
+enableNotice: true
 customNpmDependencies:
-  antd: ^5.1.0
   fastball-test-reference-component: 0.0.3
 menus:
   Classic:
@@ -27,24 +31,26 @@ menus:
       EmployeeWorkEvaluationListDescription:
         title: 嵌套表单列表详情展示
         component: dev.fastball.example.ui.classic.EmployeeWorkEvaluationListDescription
-        params: 11000007
+        params:
+          id: 11000007
   Simple:
     title: 基本组件
     menus:
       EmployeeForm:
         title: 基础表单组件
         component: dev.fastball.example.ui.simple.EmployeeForm
-#      EmployeeDescription:
-#        title: 基础详情组件
-#        component: dev.fastball.example.ui.simple.EmployeeDescription
-#        params:
-#          id: 20000001
-#          name: Mock 用户
-#          age: 33
+      #      EmployeeDescription:
+      #        title: 基础详情组件
+      #        component: dev.fastball.example.ui.simple.EmployeeDescription
+      #        params:
+      #          id: 20000001
+      #          name: Mock 用户
+      #          age: 33
       EmployeeVariableDescription:
         title: 有参详情组件
         component: dev.fastball.example.ui.simple.EmployeeVariableDescription
-        params: 11000007
+        params:
+          id: 11000007
       UserTable:
         title: 基础表格组件
         component: dev.fastball.example.ui.simple.EmployeeTable
